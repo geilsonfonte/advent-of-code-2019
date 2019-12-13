@@ -5,7 +5,8 @@ class Day5 : Puzzle {
     private val input = input().split(",").map(String::toInt)
 
     override fun answer1(): Int {
-        return 0
+        val intcode = Intcode(ComputerState(input.toMutableList(), registerValue = 1))
+        return intcode.output()
     }
 
     override fun answer2(): Int {
